@@ -436,7 +436,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   ),
                                                   onPressed: () {
                                                     openUrl(
-                                                      'https://flutter.dev',
+                                                      'https://drive.google.com/file/d/1AUV-Omnl44wTdHz_wW0xITnwYTGq1jjz/view?usp=drive_link',
                                                     );
                                                   },
                                                   child: Row(
