@@ -1232,155 +1232,147 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                border: BoxBorder.all(
-                  width: 1,
-                  color: Color(0xFF8D735C),
-                ),
-              ),
-              height: 90,
-              child: Stack(
-                alignment:
-                    AlignmentGeometry.centerLeft,
-                children: [
-                  // Glass background
-                  ClipRRect(
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(
-                        sigmaX: 4,
-                        sigmaY: 4,
-                      ),
-                      child: Container(
-                        height: 90,
-                        color: Color.fromRGBO(
-                          255,
-                          255,
-                          255,
-                          0.3,
-                        ), // semi-transparent
-                      ),
+            Stack(
+              alignment:
+                  AlignmentGeometry.centerLeft,
+              children: [
+                // Glass background
+                ClipRRect(
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(
+                      sigmaX: 2,
+                      sigmaY: 2,
+                    ),
+                    child: Container(
+                      height: 80,
+                      color: Color.fromRGBO(
+                        255,
+                        255,
+                        255,
+                        0.3,
+                      ), // semi-transparent
                     ),
                   ),
-                  // Content
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(
-                          horizontal: 16,
-                        ),
-                    child: Builder(
-                      builder: (context) {
-                        return Row(
-                          crossAxisAlignment:
-                              CrossAxisAlignment
-                                  .center,
-                          mainAxisAlignment:
-                              MainAxisAlignment
-                                  .spaceBetween,
-                          children: [
-                            Container(
-                              alignment: Alignment
-                                  .center,
-                              height: 40,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Color(
-                                      0xFFB98B6E,
-                                    ),
-                                    Color(
-                                      0xFFCE9F73,
-                                    ),
-                                  ],
-                                ),
-                                borderRadius:
-                                    BorderRadius.circular(
-                                      100,
-                                    ),
-                              ),
-                              child: Text(
-                                "S",
-                                style: TextStyle(
-                                  color: Color(
-                                    0xffDDD4CB,
-                                  ),
-                                  fontSize: 20,
-                                  fontWeight:
-                                      FontWeight
-                                          .bold,
-                                ),
-                              ),
-                            ),
-                            width > 700
-                                ? Wrap(
-                                    alignment:
-                                        WrapAlignment
-                                            .center,
-                                    crossAxisAlignment:
-                                        WrapCrossAlignment
-                                            .center,
-                                    direction: Axis
-                                        .horizontal,
-                                    spacing:
-                                        width *
-                                        0.004,
-                                    runSpacing:
-                                        width *
-                                        0.004,
-                                    children: [
-                                      MyTextButton(
-                                        text:
-                                            "Home",
-                                        widgetkey:
-                                            _myHomePage,
+                ),
+                // Content
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(
+                        horizontal: 16,
+                      ),
+                  child: Builder(
+                    builder: (context) {
+                      return Row(
+                        crossAxisAlignment:
+                            CrossAxisAlignment
+                                .center,
+                        mainAxisAlignment:
+                            MainAxisAlignment
+                                .spaceBetween,
+                        children: [
+                          Container(
+                            alignment:
+                                Alignment.center,
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              gradient:
+                                  LinearGradient(
+                                    colors: [
+                                      Color(
+                                        0xFFB98B6E,
                                       ),
-                                      MyTextButton(
-                                        text:
-                                            "About",
-                                        widgetkey:
-                                            _myAboutKey,
-                                      ),
-                                      MyTextButton(
-                                        text:
-                                            "Skills",
-                                        widgetkey:
-                                            _mySkillKey,
-                                      ),
-
-                                      MyTextButton(
-                                        text:
-                                            "Projects",
-                                        widgetkey:
-                                            _myProjectKey,
-                                      ),
-
-                                      MyTextButton(
-                                        widgetkey:
-                                            _myContactPage,
-                                        text:
-                                            "Contact",
+                                      Color(
+                                        0xFFCE9F73,
                                       ),
                                     ],
-                                  )
-                                : IconButton(
-                                    onPressed: () {
-                                      Scaffold.of(
-                                        context,
-                                      ).openEndDrawer();
-                                    },
-                                    icon: Icon(
-                                      Icons.menu,
-                                      size: 40,
-                                    ),
                                   ),
-                          ],
-                        );
-                      },
-                    ),
+                              borderRadius:
+                                  BorderRadius.circular(
+                                    100,
+                                  ),
+                            ),
+                            child: Text(
+                              "S",
+                              style: TextStyle(
+                                color: Color(
+                                  0xffDDD4CB,
+                                ),
+                                fontSize: 20,
+                                fontWeight:
+                                    FontWeight
+                                        .bold,
+                              ),
+                            ),
+                          ),
+                          width > 700
+                              ? Wrap(
+                                  alignment:
+                                      WrapAlignment
+                                          .center,
+                                  crossAxisAlignment:
+                                      WrapCrossAlignment
+                                          .center,
+                                  direction: Axis
+                                      .horizontal,
+                                  spacing:
+                                      width *
+                                      0.004,
+                                  runSpacing:
+                                      width *
+                                      0.004,
+                                  children: [
+                                    MyTextButton(
+                                      text:
+                                          "Home",
+                                      widgetkey:
+                                          _myHomePage,
+                                    ),
+                                    MyTextButton(
+                                      text:
+                                          "About",
+                                      widgetkey:
+                                          _myAboutKey,
+                                    ),
+                                    MyTextButton(
+                                      text:
+                                          "Skills",
+                                      widgetkey:
+                                          _mySkillKey,
+                                    ),
+
+                                    MyTextButton(
+                                      text:
+                                          "Projects",
+                                      widgetkey:
+                                          _myProjectKey,
+                                    ),
+
+                                    MyTextButton(
+                                      widgetkey:
+                                          _myContactPage,
+                                      text:
+                                          "Contact",
+                                    ),
+                                  ],
+                                )
+                              : IconButton(
+                                  onPressed: () {
+                                    Scaffold.of(
+                                      context,
+                                    ).openEndDrawer();
+                                  },
+                                  icon: Icon(
+                                    Icons.menu,
+                                    size: 40,
+                                  ),
+                                ),
+                        ],
+                      );
+                    },
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
