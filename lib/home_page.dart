@@ -440,6 +440,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     );
                                                   },
                                                   child: Row(
+                                                    mainAxisAlignment: MainAxisAlignment.center,
                                                     children: [
                                                       Icon(
                                                         Icons.file_download,

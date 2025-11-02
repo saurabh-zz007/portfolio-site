@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:platform_detector/platform_detector.dart';
@@ -27,6 +29,8 @@ class MyBeyondCode extends StatefulWidget {
 class _MyBeyondCodeState
     extends State<MyBeyondCode> {
   double _ele = 8;
+  double a = 0.5;
+
   bool _isZoomed = false;
   final isMobile = PlatformDetector.platform
       .byName<bool>(
@@ -48,6 +52,12 @@ class _MyBeyondCodeState
           duration: Duration(milliseconds: 300),
           curve: Curves.easeOut,
           child: Material(
+            color: Color.fromRGBO(
+              221,
+              212,
+              203,
+              a,
+            ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
                 32,
@@ -58,7 +68,12 @@ class _MyBeyondCodeState
               ),
             ),
             elevation: value,
-            shadowColor: Color(0xFF121212),
+            shadowColor: Color.fromRGBO(
+              18,
+              18,
+              18,
+              a / 4,
+            ),
 
             child: child,
           ),
@@ -156,12 +171,14 @@ class _MyBeyondCodeState
         onHover: (event) {
           setState(() {
             _ele = 20;
+            a = 0.8;
             _isZoomed = true;
           });
         },
         onExit: (event) {
           setState(() {
             _ele = 8;
+            a = 0.5;
             _isZoomed = false;
           });
         },
