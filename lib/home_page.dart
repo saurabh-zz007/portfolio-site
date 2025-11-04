@@ -11,6 +11,8 @@ import 'package:portfolio_site/Lists/beyond_code_skill_list.dart';
 import 'package:portfolio_site/Cards/card_intro.dart';
 import 'package:portfolio_site/Lists/contact_card_list.dart';
 import 'package:portfolio_site/Lists/currently_learning_list.dart';
+import 'package:portfolio_site/Lists/my_card_model.dart';
+import 'package:portfolio_site/Sections/hero_section.dart';
 import 'package:portfolio_site/Variables_Functions/desciption.dart';
 import 'package:portfolio_site/Sections/footer_content.dart';
 import 'package:portfolio_site/Cards/horizontal_education_card.dart';
@@ -184,346 +186,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     crossAxisAlignment:
                         CrossAxisAlignment.center,
                     children: [
-                      Stack(
-                        children: [
-                          ConstrainedBox(
-                            constraints:
-                                BoxConstraints(
-                                  minHeight:
-                                      height,
-                                  maxHeight:
-                                      height,
-                                ),
-                            child: Container(
-                              height:
-                                  double.infinity,
-                              width:
-                                  double.infinity,
-                              decoration: const BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment
-                                      .topRight,
-                                  end: Alignment
-                                      .bottomLeft,
-                                  colors: [
-                                    Color(
-                                      0xFFE8D5C4,
-                                    ),
-                                    Color(
-                                      0xFFDDD4CB,
-                                    ),
-                                    Color.fromARGB(
-                                      120,
-                                      212,
-                                      166,
-                                      116,
-                                    ),
-                                  ],
-                                  stops: [
-                                    0.0,
-                                    0.5,
-                                    1.0,
-                                  ],
-                                ),
-                              ),
-                              child: LayoutBuilder(
-                                builder:
-                                    (
-                                      context,
-                                      constraints,
-                                    ) {
-                                      return Column(
-                                        key:
-                                            _myHomePage,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment
-                                                .center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment
-                                                .center,
-                                        children: [
-                                          width <
-                                                  height
-                                              ? Column(
-                                                  children: [
-                                                    Text(
-                                                      "Saurabh Kumar",
-                                                      style: TextStyle(
-                                                        wordSpacing: 5,
-                                                        fontSize:
-                                                            constraints.maxWidth *
-                                                            0.09,
-                                                        fontWeight: FontWeight.bold,
-                                                        height: 1.15,
-                                                        foreground: Paint()
-                                                          ..shader =
-                                                              const LinearGradient(
-                                                                colors: [
-                                                                  Color(
-                                                                    0xff4C2D20,
-                                                                  ),
-                                                                  Color(
-                                                                    0xffB26544,
-                                                                  ),
-                                                                ],
-                                                              ).createShader(
-                                                                Rect.fromLTWH(
-                                                                  0,
-                                                                  0,
-                                                                  constraints.maxWidth,
-                                                                  constraints.maxHeight,
-                                                                ),
-                                                              ),
-                                                      ),
-                                                    ),
-                                                    Text(
-                                                      "Vishwakarma",
-                                                      style: TextStyle(
-                                                        wordSpacing: 5,
-                                                        fontSize:
-                                                            constraints.maxWidth *
-                                                            0.09,
-                                                        fontWeight: FontWeight.bold,
-                                                        height: 1.15,
-                                                        foreground: Paint()
-                                                          ..shader =
-                                                              const LinearGradient(
-                                                                colors: [
-                                                                  Color(
-                                                                    0xff4C2D20,
-                                                                  ),
-                                                                  Color(
-                                                                    0xffB26544,
-                                                                  ),
-                                                                ],
-                                                              ).createShader(
-                                                                Rect.fromLTWH(
-                                                                  0,
-                                                                  0,
-                                                                  constraints.maxWidth,
-                                                                  constraints.maxHeight,
-                                                                ),
-                                                              ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                )
-                                              : Text(
-                                                  "Saurabh Kumar Vishwakarma",
-                                                  style: TextStyle(
-                                                    wordSpacing: 5,
-                                                    fontSize:
-                                                        constraints.maxWidth *
-                                                        0.06,
-                                                    fontWeight: FontWeight.bold,
-                                                    height: 1.15,
-                                                    foreground: Paint()
-                                                      ..shader =
-                                                          const LinearGradient(
-                                                            colors: [
-                                                              Color(
-                                                                0xff4C2D20,
-                                                              ),
-                                                              Color(
-                                                                0xffB26544,
-                                                              ),
-                                                            ],
-                                                          ).createShader(
-                                                            Rect.fromLTWH(
-                                                              0,
-                                                              0,
-                                                              constraints.maxWidth,
-                                                              constraints.maxHeight,
-                                                            ),
-                                                          ),
-                                                  ),
-                                                ),
-
-                                          SizedBox(
-                                            height:
-                                                constraints.maxHeight *
-                                                0.025,
-                                          ),
-
-                                          Text(
-                                            "Flutter App Developer",
-                                            style: TextStyle(
-                                              fontSize:
-                                                  constraints.maxWidth *
-                                                  0.033,
-                                              fontWeight:
-                                                  FontWeight.w500,
-                                              height:
-                                                  1.5,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height:
-                                                constraints.maxHeight *
-                                                0.029,
-                                          ),
-                                          AnimatedTextKit(
-                                            repeatForever:
-                                                true,
-                                            displayFullTextOnTap:
-                                                true,
-                                            animatedTexts: [
-                                              TypewriterAnimatedText(
-                                                "Building beautiful, scalable, and high-performance apps.",
-                                                textStyle: TextStyle(
-                                                  fontSize:
-                                                      constraints.maxWidth *
-                                                      0.025,
-                                                  fontWeight: FontWeight.w500,
-                                                  color: Color(
-                                                    0xff5D4D3D,
-                                                  ),
-                                                ),
-                                                cursor: '|',
-                                                curve: Curves.bounceInOut,
-                                                speed: Duration(
-                                                  milliseconds: 100,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-
-                                          SizedBox(
-                                            height:
-                                                constraints.maxHeight *
-                                                0.029,
-                                          ),
-                                          Wrap(
-                                            direction:
-                                                Axis.horizontal,
-                                            spacing:
-                                                20,
-                                            runSpacing:
-                                                20,
-                                            children: [
-                                              Container(
-                                                height: 50,
-                                                width: 255,
-                                                decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(
-                                                    12,
-                                                  ),
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      Color(
-                                                        0xFF704E37,
-                                                      ),
-                                                      Color(
-                                                        0xFFD4BCAB,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                child: OutlinedButton(
-                                                  style: OutlinedButton.styleFrom(
-                                                    side: BorderSide(
-                                                      width: 1,
-                                                      color: Color(
-                                                        0xFF121212,
-                                                      ),
-                                                    ),
-                                                    backgroundColor: Colors.transparent,
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius: BorderRadius.circular(
-                                                        12,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  onPressed: () {
-                                                    openUrl(
-                                                      'https://drive.google.com/file/d/1AUV-Omnl44wTdHz_wW0xITnwYTGq1jjz/view?usp=drive_link',
-                                                    );
-                                                  },
-                                                  child: Row(
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Icon(
-                                                        Icons.file_download,
-                                                        size: 15,
-                                                        color: Color(
-                                                          0xFFE8D5C4,
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        width: 10,
-                                                      ),
-                                                      Text(
-                                                        "Download Resume",
-                                                        style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Color(
-                                                            0xFFE8D5C4,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-
-                                              SizedBox(
-                                                height: 50,
-                                                width: 255,
-                                                child: OutlinedButton(
-                                                  style: OutlinedButton.styleFrom(
-                                                    side: BorderSide(
-                                                      width: 2,
-                                                      color: Color(
-                                                        0xFFA0522D,
-                                                      ),
-                                                    ),
-
-                                                    shape: RoundedRectangleBorder(
-                                                      borderRadius: BorderRadius.circular(
-                                                        12,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  onPressed: () {
-                                                    scrollToProjectsPosition(
-                                                      _myProjectKey,
-                                                    );
-                                                  },
-                                                  child: Row(
-                                                    mainAxisAlignment: MainAxisAlignment.center,
-                                                    children: [
-                                                      Icon(
-                                                        Icons.badge_outlined,
-                                                        size: 15,
-                                                        color: Color(
-                                                          0xFF121212,
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        width: 10,
-                                                      ),
-                                                      Text(
-                                                        "View Projects",
-                                                        style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Color(
-                                                            0xFF121212,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      );
-                                    },
-                              ),
-                            ),
-                          ),
-                        ],
+                      MyHeroSection(
+                        key: _myHomePage,
+                        projectKey: _myProjectKey,
+                        height: height,
+                        width: width,
                       ),
                       Container(
                         alignment:
@@ -546,7 +213,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                           .maxWidth <
                                       1200
                                   ? Column(
-                                      spacing: 25,
                                       children: [
                                         Material(
                                           shape: RoundedRectangleBorder(
@@ -586,58 +252,38 @@ class _MyHomePageState extends State<MyHomePage> {
                                             ),
                                           ),
                                         ),
-                                        MyCard(
-                                          iconColor:
-                                              Color(
-                                                0xffE8D5C4,
-                                              ),
-                                          icon: Icons
-                                              .lightbulb_outline,
-                                          text1:
-                                              "Creativity",
-                                          text2:
-                                              "Innovative solution to complex problems",
-                                          color1: Color(
-                                            0xFFD19C6F,
-                                          ),
-                                          color2: Color(
-                                            0xFFC4795C,
-                                          ),
+                                        SizedBox(
+                                          height:
+                                              25,
                                         ),
-                                        MyCard(
-                                          iconColor:
-                                              Color(
-                                                0xffE8D5C4,
-                                              ),
-                                          icon: Icons
-                                              .code,
-                                          text1:
-                                              "App logic",
-                                          text2:
-                                              'Clean, Scalable, and Effitient code',
-                                          color1: Color(
-                                            0xFF7E5035,
-                                          ),
-                                          color2: Color(
-                                            0xFFBC6F51,
-                                          ),
-                                        ),
-                                        MyCard(
-                                          iconColor:
-                                              Color(
-                                                0xffE8D5C4,
-                                              ),
-                                          icon: Icons
-                                              .color_lens_outlined,
-                                          text1:
-                                              "Design thinking",
-                                          text2:
-                                              "User- centered beautiful interface ",
-                                          color1: Color(
-                                            0xFFBF906F,
-                                          ),
-                                          color2: Color(
-                                            0xFFE3C9AF,
+                                        SizedBox(
+                                          height:
+                                              myCardsList.length *
+                                              130,
+                                          child: ListView.builder(
+                                            itemCount:
+                                                myCardsList.length,
+
+                                            itemBuilder:
+                                                (
+                                                  context,
+                                                  index,
+                                                ) {
+                                                  final card = myCardsList[index];
+                                                  return Padding(
+                                                    padding: const EdgeInsets.all(
+                                                      12.0,
+                                                    ),
+                                                    child: MyCard(
+                                                      iconColor: card.iconColor,
+                                                      icon: card.icon,
+                                                      text1: card.text1,
+                                                      text2: card.text2,
+                                                      color1: card.color1,
+                                                      color2: card.color2,
+                                                    ),
+                                                  );
+                                                },
                                           ),
                                         ),
                                       ],
@@ -683,53 +329,85 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ),
 
                                         Expanded(
-                                          child: Column(
-                                            spacing:
-                                                20,
-                                            children: [
-                                              MyCard(
-                                                icon: Icons.lightbulb_outline,
-                                                text1: "Creativity",
-                                                text2: "Innovative solution to complex problems",
-                                                color1: Color(
-                                                  0xFFD19C6F,
+                                          child: ConstrainedBox(
+                                            constraints: BoxConstraints(
+                                              maxHeight:
+                                                  myCardsList.length *
+                                                  130,
+                                            ),
+
+                                            child: /*Column(
+                                              spacing:
+                                                  20,
+                                              children: [
+                                                MyCard(
+                                                  icon: Icons.lightbulb_outline,
+                                                  text1: "Creativity",
+                                                  text2: "Innovative solution to complex problems",
+                                                  color1: Color(
+                                                    0xFFD19C6F,
+                                                  ),
+                                                  color2: Color(
+                                                    0xFFC4795C,
+                                                  ),
+                                                  iconColor: Color(
+                                                    0xffE8D5C4,
+                                                  ),
                                                 ),
-                                                color2: Color(
-                                                  0xFFC4795C,
+                                                MyCard(
+                                                  icon: Icons.code,
+                                                  text1: "App logic",
+                                                  text2: 'Clean, Scalable, and Effitient code',
+                                                  color1: Color(
+                                                    0xFF7E5035,
+                                                  ),
+                                                  color2: Color(
+                                                    0xFFBC6F51,
+                                                  ),
+                                                  iconColor: Color(
+                                                    0xffE8D5C4,
+                                                  ),
                                                 ),
-                                                iconColor: Color(
-                                                  0xffE8D5C4,
+                                                MyCard(
+                                                  icon: Icons.color_lens_outlined,
+                                                  text1: "Design thinking",
+                                                  text2: "User- centered beautiful interface ",
+                                                  color1: Color(
+                                                    0xFFBF906F,
+                                                  ),
+                                                  color2: Color(
+                                                    0xFFE3C9AF,
+                                                  ),
+                                                  iconColor: Color(
+                                                    0xffE8D5C4,
+                                                  ),
                                                 ),
-                                              ),
-                                              MyCard(
-                                                icon: Icons.code,
-                                                text1: "App logic",
-                                                text2: 'Clean, Scalable, and Effitient code',
-                                                color1: Color(
-                                                  0xFF7E5035,
-                                                ),
-                                                color2: Color(
-                                                  0xFFBC6F51,
-                                                ),
-                                                iconColor: Color(
-                                                  0xffE8D5C4,
-                                                ),
-                                              ),
-                                              MyCard(
-                                                icon: Icons.color_lens_outlined,
-                                                text1: "Design thinking",
-                                                text2: "User- centered beautiful interface ",
-                                                color1: Color(
-                                                  0xFFBF906F,
-                                                ),
-                                                color2: Color(
-                                                  0xFFE3C9AF,
-                                                ),
-                                                iconColor: Color(
-                                                  0xffE8D5C4,
-                                                ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),*/ ListView.builder(
+                                              itemCount:
+                                                  myCardsList.length,
+
+                                              itemBuilder:
+                                                  (
+                                                    context,
+                                                    index,
+                                                  ) {
+                                                    final card = myCardsList[index];
+                                                    return Padding(
+                                                      padding: const EdgeInsets.symmetric(
+                                                        vertical: 12,
+                                                      ),
+                                                      child: MyCard(
+                                                        iconColor: card.iconColor,
+                                                        icon: card.icon,
+                                                        text1: card.text1,
+                                                        text2: card.text2,
+                                                        color1: card.color1,
+                                                        color2: card.color2,
+                                                      ),
+                                                    );
+                                                  },
+                                            ),
                                           ),
                                         ),
                                       ],

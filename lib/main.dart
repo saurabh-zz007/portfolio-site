@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_site/Cards/splash_card.dart';
+import 'package:portfolio_site/Cards/splash_card2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
       theme: ThemeData(
         fontFamily: 'Futura',
 
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      home: BeautifulSplashScreen(),
+      home: MySplashScreen2(),
     );
   }
 }
